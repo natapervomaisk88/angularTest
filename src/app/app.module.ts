@@ -12,6 +12,8 @@ import { MycustompipePipe } from './pipes/mycustompipe.pipe';
 import { ImageComponent } from './components/image/image.component';
 import { FormsModule } from '@angular/forms';
 import { InputCarComponent } from './components/input-car/input-car.component';
+import { ZoomDirective } from './directives/zoom.directive';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { InputCarComponent } from './components/input-car/input-car.component';
     MycustompipePipe,
     ImageComponent,
     InputCarComponent,
+    ZoomDirective,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
