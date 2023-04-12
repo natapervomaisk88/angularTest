@@ -5,6 +5,7 @@ import { CarsService } from './services/cars.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
+  providers: [CarsService],
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
@@ -15,7 +16,6 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.listCars();
   }
-
   addCar(car: ICar): void {
     car.id = this.cars.length + 1;
     this.cars.push(car);
@@ -24,6 +24,9 @@ export class AppComponent implements OnInit {
     this._carsService.getAllCars().subscribe({
       next: (data) => {
         this.cars = data;
+      },
+      error: (err) => {
+        console.log(err);
       },
     });
   }

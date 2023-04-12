@@ -10,7 +10,7 @@ import { CarComponent } from './components/car/car.component';
 import { CounterComponent } from './components/counter/counter.component';
 import { MycustompipePipe } from './pipes/mycustompipe.pipe';
 import { ImageComponent } from './components/image/image.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputCarComponent } from './components/input-car/input-car.component';
 import { ZoomDirective } from './directives/zoom.directive';
 import { HeaderComponent } from './components/header/header.component';
@@ -18,6 +18,7 @@ import { HooksComponent } from './components/hooks/hooks.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
+import { TestFormComponent } from './components/test-form/test-form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +30,7 @@ import { MatDividerModule } from '@angular/material/divider';
     ZoomDirective,
     HeaderComponent,
     HooksComponent,
+    TestFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +40,7 @@ import { MatDividerModule } from '@angular/material/divider';
     MatIconModule,
     MatButtonModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     MatCardModule,
     MatDividerModule,

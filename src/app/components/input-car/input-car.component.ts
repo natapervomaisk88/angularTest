@@ -8,6 +8,6 @@ import { ICar } from 'src/app/models/ICar';
 export class InputCarComponent {
   @Output() outCar = new EventEmitter<ICar>();
   addCar(model: HTMLInputElement): void {
-    this.outCar.emit({ id: 0, model: model.value, year: 2000 });
+    this.outCar.emit({ model: model.value, year: 2000, price: 0 });
   }
 }
