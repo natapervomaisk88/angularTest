@@ -1,20 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ICar } from './models/ICar';
+import { CarsService } from './services/cars.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'app-ng';
-  cars: ICar[] = [
-    // { id: 1, model: 'opel', year: 2020 },
-    // { id: 2, model: 'ford', year: 2021 },
-    // { id: 3, model: 'audi', year: 2022 },
-  ];
+  cars: ICar[] = [];
+  timer: any = Date.now();
+  constructor(private _carsService: CarsService) {}
+  ngOnInit(): void {
+    this.listCars();
+  }
+
   addCar(car: ICar): void {
     car.id = this.cars.length + 1;
     this.cars.push(car);
+  }
+  listCars(): any {
+    this._carsService.getAllCars().subscribe({
+      next: (data) => {
+        this.cars = data;
+      },
+    });
   }
 }

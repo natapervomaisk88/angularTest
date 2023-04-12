@@ -14,7 +14,10 @@ import { FormsModule } from '@angular/forms';
 import { InputCarComponent } from './components/input-car/input-car.component';
 import { ZoomDirective } from './directives/zoom.directive';
 import { HeaderComponent } from './components/header/header.component';
-
+import { HooksComponent } from './components/hooks/hooks.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MatCardModule } from '@angular/material/card';
+import { MatDividerModule } from '@angular/material/divider';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +28,7 @@ import { HeaderComponent } from './components/header/header.component';
     InputCarComponent,
     ZoomDirective,
     HeaderComponent,
+    HooksComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +38,9 @@ import { HeaderComponent } from './components/header/header.component';
     MatIconModule,
     MatButtonModule,
     FormsModule,
+    HttpClientModule,
+    MatCardModule,
+    MatDividerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

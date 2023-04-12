@@ -1,0 +1,28 @@
+{
+  "cars": [
+    {
+      "id": 11,
+      "model": "mazda",
+      "year": 2021,
+      "price": 200
+    },
+    {
+      "id": 12,
+      "model": "bmw",
+      "year": 2019,
+      "price": 500
+    },
+    {
+      "id": 13,
+      "model": "lexus",
+      "year": 2023,
+      "price": 700
+    },
+    {
+      "model": "bogdan",
+      "year": 2020,
+      "price": 3000,
+      "id": 14
+    }
+  ]
+}

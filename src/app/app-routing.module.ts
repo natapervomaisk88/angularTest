@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CounterComponent } from './components/counter/counter.component';
 import { ImageComponent } from './components/image/image.component';
+import { CarComponent } from './components/car/car.component';
 
 const routes: Routes = [
   { path: 'counter', component: CounterComponent },
   { path: 'images', component: ImageComponent },
+  { path: 'cars', component: CarComponent },
 ];
 
 @NgModule({

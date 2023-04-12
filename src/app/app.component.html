@@ -1,11 +1,12 @@
 <app-header></app-header>
-<ul *ngIf="cars.length > 0; else emptyBlock">
-  <li *ngFor="let car of cars">
+<div *ngIf="cars.length > 0; else emptyBlock">
+  <div *ngFor="let car of cars">
     <app-car [item]="car"></app-car>
-  </li>
-</ul>
+  </div>
+</div>
 <ng-template #emptyBlock><h3 appZoom>List is empty</h3></ng-template>
-
+<!-- 
 <app-input-car (outCar)="addCar($event)"></app-input-car>
 
+<app-hooks [timer]="timer"></app-hooks> -->
 <router-outlet></router-outlet>
